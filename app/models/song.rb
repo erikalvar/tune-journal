@@ -4,8 +4,8 @@ class Song < ApplicationRecord
   has_many :song_genres
   has_many :genres, through: :song_genres
   belongs_to :user
-  # has_many :setlist_songs
-  # has_many :setlists, through: :setlist_songs
+  has_many :setlist_songs
+  has_many :setlists, through: :setlist_songs
   has_many :references
   has_many :documents
 end
