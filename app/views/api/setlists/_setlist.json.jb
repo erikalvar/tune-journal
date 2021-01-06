@@ -1,0 +1,7 @@
+{
+  id: setlist.id,
+  user_id: setlist.user_id,
+  name: setlist.name,
+  event_date: setlist.event_date,
+  public: setlist.public,
+}

@@ -1,0 +1,3 @@
+@setlists.map do |setlist|
+  render partial: "setlist.json.jb", locals: { setlist: setlist }
+end
