@@ -19,5 +19,8 @@ Rails.application.routes.draw do
     get "/setlists/:id" => "setlists#show"
     patch "/setlists/:id" => "setlists#update"
     delete "/setlists/:id" => "setlists#destroy"
+
+    post "/setlist_songs" => "setlist_songs#create"
+    delete "/setlist_songs/" => "setlist_songs#destroy"
   end
 end

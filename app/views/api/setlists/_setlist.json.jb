@@ -4,4 +4,5 @@
   name: setlist.name,
   event_date: setlist.event_date,
   public: setlist.public,
+  # songs: setlist.songs,
 }
