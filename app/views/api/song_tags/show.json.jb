@@ -1,0 +1,7 @@
+{
+  id: @song_tag.id,
+  song_id: @song.id,
+  song_title: @song.title,
+  name: @tag.name,
+  tag_id: @tag.id,
+}

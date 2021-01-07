@@ -22,5 +22,13 @@ Rails.application.routes.draw do
 
     post "/setlist_songs" => "setlist_songs#create"
     delete "/setlist_songs/" => "setlist_songs#destroy"
+
+    get "/tags" => "tags#index"
+    get "/tags/:id" => "tags#show"
+    patch "/tags/:id" => "tags#update"
+    delete "/tags/:id" => "tags#destroy"
+
+    post "/song_tags" => "song_tags#create"
+    delete "/song_tags/:id" => "song_tags#destroy"
   end
 end
