@@ -1,8 +1,9 @@
 class Api::SongsController < ApplicationController
-  before_action :authenticate_user
+  # before_action :authenticate_user
 
   def index
-    @songs = Song.where(user_id: current_user.id).order(:title)
+    @songs = Song.all.order(:title)
+    # @songs = Song.where(user_id: current_user.id).order(:title)
     render "index.json.jb"
   end
 
@@ -27,11 +28,12 @@ class Api::SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
-    if @song.user_id == current_user.id
-      render "show.json.jb"
-    else
-      render json: {}, status: :unauthorized
-    end
+    render "show.json.jb"
+    # if @song.user_id == current_user.id
+    #   render "show.json.jb"
+    # else
+    #   render json: {}, status: :unauthorized
+    # end
   end
 
   def update
