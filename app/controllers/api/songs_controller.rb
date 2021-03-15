@@ -1,5 +1,5 @@
 class Api::SongsController < ApplicationController
-  # before_action :authenticate_user
+  before_action :authenticate_user
 
   def index
     @songs = Song.all.order(:title)

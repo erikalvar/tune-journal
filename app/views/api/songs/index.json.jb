@@ -1,3 +1,7 @@
 @songs.map do |song|
-  render partial: "song.json.jb", locals: { song: song }
+  s = render partial: "song.json.jb", locals: { song: song }
+  s[:tags] = song.tags.map do |tag|
+    render partial: "/api/tags/tag.json.jb", locals: { tag: tag }
+  end
+  s
 end

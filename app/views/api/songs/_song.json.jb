@@ -9,4 +9,5 @@
   duration: song.duration,
   status: song.status,
   notes: song.notes,
+  tags: song.tags,
 }

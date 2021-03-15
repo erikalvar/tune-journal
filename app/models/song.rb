@@ -8,4 +8,7 @@ class Song < ApplicationRecord
   has_many :setlists, through: :setlist_songs
   has_many :references
   has_many :documents
+
+  # def tag_info
+  # end
 end
