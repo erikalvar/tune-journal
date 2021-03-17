@@ -3,6 +3,7 @@ class Api::SongsController < ApplicationController
 
   def index
     @songs = Song.all.order(:title)
+    #test
     # @songs = Song.where(user_id: current_user.id).order(:title)
     render "index.json.jb"
   end

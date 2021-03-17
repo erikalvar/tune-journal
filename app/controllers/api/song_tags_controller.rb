@@ -13,7 +13,7 @@ class Api::SongTagsController < ApplicationController
       @song = Song.find(params[:song_id])
       render "show.json.jb"
     else
-      render json: { errors: @recipe_tag.errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: @song_tag.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
